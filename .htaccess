@@ -1,0 +1,15 @@
+# Запускаем движок замены для того чтобы убрать расширение .php в url 
+
+RewriteEngine on
+
+# Если запрашиваемы объект не найден
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Если запрашиваемый объект с дописанным расширеним php - файл
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+# Дклвем замену с дописанием .php
+
+RewriteRule ^(.*)$ $1.php
