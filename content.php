@@ -7,7 +7,7 @@ $sql = "SELECT * FROM `film` ORDER BY id DESC";
 
 $result = mysqli_query($connect,$sql);
 
-unset($_SESSION['page-two']);
+$id_category = $_GET['id_category'];
 
 
 
@@ -35,47 +35,59 @@ unset($_SESSION['page-two']);
       </h1>
    </section>
 
-  
+   <form class="category" action="category-script.php" id="1" method="POST">
+      
+      <select  name ="categories" form="1">
+               <option value="0">Все категории</option>
+               <option value="1">комедия</option>
+               <option value="2">боевик</option>
+               <option value="3">детектив </option>
+               <option value="4">драма</option>
+               <option value="5">документальный</option>
+               <option value="6">исторический</option>
+               <option value="7">мистика</option>
+               <option value="8">мультфильм</option>
+               <option value="9">приключения</option>
+               <option value="10">ужасы</option>
+               <option value="11">фантастика</option>
+               <option value="12">фэнтази</option>
 
+      </select>
+      <button class="btn-add-form" name="next-second" type="submit">Поиск</button>
+   </form>
    <main>
 
-   <form action="category-script.php" id="1" method="post">
+   <?php if($id_category == '' || $id_category == 0): ?>
+
+      <?php while($row = mysqli_fetch_assoc($result)): ?>
       
-   <select name ="time" form="1">
-            <option value="all">Все категории</option>
-            <option value="10:00">10:00</option>
-            <option value="11:00">11:00</option>
-            <option value="12:00">12:00</option>
-            <option value="13:00">13:00</option>
-            <option value="14:00">14:00</option>
-            <option value="10:00">10:00</option>
-            <option value="11:00">11:00</option>
-            <option value="12:00">12:00</option>
-            <option value="13:00">13:00</option>
-            <option value="14:00">14:00</option>
-            <option value="13:00">13:00</option>
-            <option value="14:00">14:00</option>
-
-
-         </select>
-
-   </form>
-
-
-   <?php   
-
-      while($row = mysqli_fetch_assoc($result)):
-   ?>
-
-   <a  href="page-film?id=<?php echo $row['id'] ?>&userid=<?php echo $_SESSION['id_user'] ?>">
-      <div class="film-card">
-         <img src="../img/<?php echo $row['img']?>" alt="123">
-         <h2><?php echo $row['title'] ?></h2>
-         
-
-      </div>
-   </a>     
-   
-
+        
+               <a  href="page-film?id=<?php echo $row['id'] ?>&userid=<?php echo $_SESSION['id_user'] ?>">
+                  <div class="film-card">
+                     <img src="../img/<?php echo $row['img']?>" alt="123">
+                     <h2><?php echo $row['title'] ?></h2>
+                     
+                  
+                  </div>
+               </a>     
+             
+      
    <?php endwhile ?>
+
+   <?php else: ?>     
+      <?php while($row = mysqli_fetch_assoc($result)): ?>
+         <?php if($row['category'] == $id_category): ?>
+         
+                  <a  href="page-film?id=<?php echo $row['id'] ?>&userid=<?php echo $_SESSION['id_user'] ?>">
+                     <div class="film-card">
+                        <img src="../img/<?php echo $row['img']?>" alt="123">
+                        <h2><?php echo $row['title'] ?></h2>
+                        
+                     
+                     </div>
+                  </a>     
+               
+         <?php endif ?>
+      <?php endwhile ?>
+   <?php endif ?>
    </main>

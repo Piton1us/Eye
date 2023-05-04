@@ -90,6 +90,17 @@ header {
   width: 100%;
 }
 
+.category {
+  width: 80%;
+  display: flex;
+  text-align: center;
+  box-sizing: border-box;
+}
+.category select {
+  padding: 0 20px;
+  margin: 40px 20px 0 20px;
+}
+
 main {
   margin: 20px 0 50px 0;
   display: flex;

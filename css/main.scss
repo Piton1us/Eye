@@ -111,7 +111,22 @@ header{
    }
 }
 
+.category{
 
+   width: 80%;
+   display: flex;
+   text-align: center;
+   box-sizing: border-box;
+   
+
+   select{
+
+      padding: 0 20px;
+      margin: 40px 20px 0 20px;
+   }
+
+
+}
 
 main{
    
@@ -511,3 +526,4 @@ input::-webkit-inner-spin-button {
 .authorization button:hover{
    background: #63a2ff;
 }
+
