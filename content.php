@@ -39,14 +39,14 @@ $id_category = $_GET['id_category'];
       
       <select  name ="categories" form="1">
                <option value="0">Все категории</option>
-               <option value="1">комедия</option>
-               <option value="2">боевик</option>
-               <option value="3">детектив </option>
-               <option value="4">драма</option>
-               <option value="5">документальный</option>
-               <option value="6">исторический</option>
+               <option value="1">комедии</option>
+               <option value="2">боевики</option>
+               <option value="3">детективы </option>
+               <option value="4">драмы</option>
+               <option value="5">документальные</option>
+               <option value="6">исторические</option>
                <option value="7">мистика</option>
-               <option value="8">мультфильм</option>
+               <option value="8">мультфильмы</option>
                <option value="9">приключения</option>
                <option value="10">ужасы</option>
                <option value="11">фантастика</option>

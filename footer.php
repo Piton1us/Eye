@@ -1,7 +1,7 @@
 
 <footer>
       <div class="copyright">
-         Все права защищены &copy; 2050
+         Все права защищены &copy; <?php echo date('Y'); ?>
       </div>
    </footer>
 
