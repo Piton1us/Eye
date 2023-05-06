@@ -32,11 +32,11 @@ function redirect(){
       $_SESSION['msgBox'] = 'Такой пользователь не найден';
       redirect();
    }
-   
-   $id_admin = $user['id'];
+   $user_id = $user['id'];
+   $_SESSION['user_id'] = $user_id;
   
    
-   header("Location: /admin/index?id_admin=$id_admin");
+   header("Location: /admin/index.php");
       
 
    

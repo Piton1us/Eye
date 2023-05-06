@@ -9,6 +9,7 @@
       
       <input name="file" type="file" require>
       <input type="text" name="description" placeholder="Описание фильма" required>
+      <input type="number" name="category" placeholder="Категория" required>
       <input type="text" name="link" placeholder="Ссылка на трейлер" required>
       <button class="btn-add-form" name="btn-add" type="submit"><span class="material-icons">add</span>Добавить</button>
    </form>

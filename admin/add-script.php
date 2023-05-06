@@ -18,8 +18,11 @@ if(isset($_POST['btn-add'])){
    $title = $_POST['title'];
    $description = $_POST['description'];
    $link = $_POST['link'];
+   $category = $_POST['category'];
 
-   $sql = "INSERT INTO `film` (`title`,`description`,`img`,`link`) VALUES ('$title','$description','$img','$link')";
+   $sql = "INSERT INTO `film` (`title`,`description`,`category`,`img`,`link`) VALUES ('$title','$description','$category','$img','$link')";
+
+   var_dump($sql);
 
    $result = mysqli_query($connect,$sql);
    mysqli_close($connect);

@@ -1,8 +1,10 @@
 <?php
-   $id_admin = $_GET['id_admin'];
-   if($id_admin == '' ){
+   session_start();
+
+   if($_SESSION['user_id'] == '' ){
       
      header('Location: /admin/login-admin.php');
+     exit();
    }
 
 ?>
