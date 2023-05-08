@@ -6,7 +6,7 @@ function redirect(){
    header('Location: registration.php');
    exit;
 }
-
+   mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
    require('../db.php');
 
    $name = filter_var(trim($_POST['name']),FILTER_SANITIZE_STRING);
@@ -29,9 +29,30 @@ function redirect(){
    $_SESSION['name'] = $name;
    $password = md5($password);
 
-   $sql = "INSERT INTO `users` (`name`,`surname`,`email`,`phone`,`login`,`password`) VALUES ('$name','$surname','$email','$phone','$login','$password')";
+   // Запрос на добавление нового пользователя в таблицу users
+   $sql_users = "INSERT INTO `users` (`login`,`password`) VALUES ('$login','$password')";
 
-   $result = mysqli_query($connect,$sql);
+   $result_users = mysqli_query($connect,$sql_users);
+
+
+
+   $sql_user_id = "SELECT * FROM `users` WHERE login = '$login' AND password = '$password'";
+
+   $res_user_id = mysqli_query($connect,$sql_user_id);
+
+   $user = mysqli_fetch_assoc($res_user_id);
+   
+   $user_id = $user['id'];
+
+
+
+
+   
+   // Запрос на добавление данных в таблицу users_info
+  $sql_users = "INSERT INTO `users_info` (`id_user`,`name`,`surname`,`email`,`phone`) VALUES ('$user_id','$name','$surname','$email','$phone')";
+
+   var_dump($sql_users);
+   $result = mysqli_query($connect,$sql_users);
    
 
    mysqli_close($connect);
