@@ -62,7 +62,7 @@ $id_category = $_GET['id_category'];
       <?php while($row = mysqli_fetch_assoc($result)): ?>
       
         
-               <a  href="page-film?id=<?php echo $row['id'] ?>&userid=<?php echo $_SESSION['id_user'] ?>">
+               <a  href="page-film?id=<?php echo $row['id'] ?>&userid=<?php echo $user['id'] ?>">
                   <div class="film-card">
                      <img src="../img/<?php echo $row['img']?>" alt="123">
                      <h2><?php echo $row['title'] ?></h2>
@@ -78,7 +78,7 @@ $id_category = $_GET['id_category'];
       <?php while($row = mysqli_fetch_assoc($result)): ?>
          <?php if($row['category'] == $id_category): ?>
          
-                  <a  href="page-film?id=<?php echo $row['id'] ?>&userid=<?php echo $_SESSION['id_user'] ?>">
+                  <a  href="page-film?id=<?php echo $row['id'] ?>&userid=<?php echo $user['id'] ?>">
                      <div class="film-card">
                         <img src="../img/<?php echo $row['img']?>" alt="123">
                         <h2><?php echo $row['title'] ?></h2>

@@ -35,7 +35,7 @@ function redirect(){
    $result_users = mysqli_query($connect,$sql_users);
 
 
-
+   // Запрос на получение id пользователя что бы вставить в поле users_info
    $sql_user_id = "SELECT * FROM `users` WHERE login = '$login' AND password = '$password'";
 
    $res_user_id = mysqli_query($connect,$sql_user_id);

@@ -14,9 +14,9 @@
   $row = $_GET['row'];
   $seat = $_GET['seat']; 
   $price = $_GET['price']; 
-
-  $_SESSION['id_film'] = $id_film;
-  $_SESSION['id_user'] = $id_user;
+ 
+//   $_SESSION['id_film'] = $id_film;
+//   $_SESSION['id_user'] = $id_user;
   $page =  $_GET['page'];
   
 /////////////////////////////////////////////////////////////
@@ -89,11 +89,11 @@
    
    
    
-   // $sql = "INSERT INTO `booking` (`user_id`,`f_name`,`phone`,`email`,`film_id`,`data`,`time`,`row`,`seat`,`payment`,`price`) VALUES ('$id_user','$f_name','$phone','$email','$id_film','$date','$time','$row','$seat','$payment','$price')";
+    $sql = "INSERT INTO `booking` (`user_id`,`f_name`,`phone`,`email`,`film_id`,`data`,`time`,`row`,`seat`,`payment`,`price`) VALUES ('$id_user','$f_name','$phone','$email','$id_film','$date','$time','$row','$seat','$payment','$price')";
    
-   //  $result = mysqli_query($connect,$sql);
+    $result = mysqli_query($connect,$sql);
 
-    
+    var_dump($sql);
 
 
 
@@ -105,7 +105,7 @@
 
    mysqli_close($connect);
 
-   
+   header('Location: thanks.php');
 
 //Отправка пользователю пьсьма с данными о сеансе. 
 
@@ -140,7 +140,8 @@ if(!$mail->send()){
     echo "Mailer Error: " . $mail->ErrorInfo;
 }else{
     echo "Message sent!";
+    
 }
 
-
+   exit;
 ?>

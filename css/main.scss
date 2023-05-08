@@ -13,6 +13,7 @@ a {
 
 
 body{
+   
    font-family: 'Open Sans', sans-serif;
    display: flex;
    align-items: center;
@@ -141,13 +142,12 @@ header{
 }
 
 main{
-   
+   height: 100%;
    margin: 20px 0 50px 0;
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
    max-width: 1600px;
-   width: 100%;
    color: #fff;
 }
 
@@ -326,7 +326,7 @@ main{
    text-align: center;
   // flex-direction: column;
   flex-wrap: wrap;
-   
+  
    max-width: 2050px;
    width: 100%;
 }
@@ -539,3 +539,19 @@ input::-webkit-inner-spin-button {
    background: #63a2ff;
 }
 
+/////page thanks
+
+
+.thanks{
+   height: 84vh;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   padding-bottom: 100px;
+   box-sizing: border-box;
+}
+
+.thanks__title{
+   margin: 0 0 15px 0;
+}
