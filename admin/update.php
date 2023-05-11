@@ -42,6 +42,8 @@
 
          <input name="description" type="textarea" value="<?php echo $row['description'] ?>" placeholder="Описание" >
 
+         <input name="category" type="number" value="<?php echo $row['category'] ?>" placeholder="Жанр" >
+
          <input name="link" type="text" value="<?php echo $row['link'] ?>" placeholder="Ccылка на трейлер" >
 
          <button class="btn-update-form" name="btn-update" type="submit"><span class="material-icons">cached</span>Обновить</button>

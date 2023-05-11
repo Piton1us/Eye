@@ -9,17 +9,18 @@
    $title = $_POST['title'];
    $description = $_POST['description'];
    $link = $_POST['link'];
+   $category = $_POST['category'];
    var_dump($title);
    if(isset($_POST['btn-update'])){
 
       //Запрос на обновление данных в бд
-      $sql = "UPDATE `film` SET `title` = '$title', `description` = '$description', `link` = '$link'WHERE id = '$id'";
+      $sql = "UPDATE `film` SET `title` = '$title', `description` = '$description',`category` = '$category', `link` = '$link' WHERE id = '$id'";
 
       $result = mysqli_query($connect,$sql);
 
       mysqli_close($connect);
 
-   
+      var_dump($sql);
 
 
 

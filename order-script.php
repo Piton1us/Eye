@@ -129,7 +129,7 @@ $mail->SMTPAuth = true;
 $mail->Username = '89169196952@mail.ru';
 $mail->Password = 'kBCqbwbRufiZ2Zihk6v4';
 $mail->setFrom('89169196952@mail.ru', 'EYE');
-$mail->addAddress('lairon.lairon@bk.ru', 'gfhj');
+$mail->addAddress('danila.yuldash.00@mail.ru', 'gfhj');
 $mail->setLanguage('ru', '/optional/path/to/language/directory/');
 $mail->Subject = 'Билет на ' . $film['title'];
 $mail->msgHTML('Билет на ' . $film['title'] . "<br>" . "<br>" . "Ряд " . $row . " Место " . $seat . "<br>" . "<br>". "Итого " . $price); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
