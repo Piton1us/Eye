@@ -45,8 +45,6 @@ function redirect(){
    $user_id = $user['id'];
 
 
-
-
    
    // Запрос на добавление данных в таблицу users_info
   $sql_users = "INSERT INTO `users_info` (`id_user`,`name`,`surname`,`email`,`phone`) VALUES ('$user_id','$name','$surname','$email','$phone')";
