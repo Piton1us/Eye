@@ -23,6 +23,10 @@ session_start();
          <a href="../admin/index.php"><h1>Панель администратора</h1></a>
       </div>
 
+      <div class="orders">
+         <a href="../admin/user-orders.php">Заказы</a>
+      </div>
+
       <div class="login">
             Привет: <?= $_SESSION['name']; ?>
             <a name="btn-exit" href="logout"><span class="material-icons">exit_to_app</span></a>

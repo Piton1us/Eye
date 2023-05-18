@@ -22,6 +22,7 @@ function redirect(){
    
    $user = mysqli_fetch_assoc($result);
    
+   $_SESSION['id_user'] = $user['id'];
 
    if(count($user) == 0){
 
