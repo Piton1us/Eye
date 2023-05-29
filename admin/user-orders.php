@@ -14,7 +14,7 @@
 <section class="user-orders">
 
 <?php while($users = mysqli_fetch_assoc($result)): ?>
-   <?php //print_r($users); ?>
+   
    <details>
       
       <summary class='user-title'>
