@@ -384,4 +384,11 @@ footer {
 .order_details {
   box-sizing: border-box;
   padding: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .authorization {
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
 }/*# sourceMappingURL=admin.css.map */
