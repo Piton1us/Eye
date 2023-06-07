@@ -30,6 +30,7 @@
             <p> Описание: <?php echo $row['description'] ?></p>
 
             <a href="order?id=<?php echo $row['id'] ?>&userid=<?php echo $idUser ?>&page=1"><span class="material-symbols-outlined">confirmation_number</span>Купить билет</a>
+            <a href="order-online?id=<?php echo $row['id'] ?>&userid=<?php echo $idUser ?>&price=<?php $row['price'] ?>"><span class="material-symbols-outlined">confirmation_number</span>Купить фильм онлайн</a>
             
          
          </div>
