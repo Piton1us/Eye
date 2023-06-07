@@ -36,8 +36,8 @@
          <p class="payment-p">Итого к оплате: 299 р. <?php echo $price ?></p>
       </div>
       <div class="order-btn-div">
-         <button class="btn-add-form" name="next-fourth" type="submit">Далее</button>
-         <button class="btn-add-form" name="pre" type="submit" >Назад</button>
+         <button class="btn-add-form" name="next-fourth" type="submit">Готово</button>
+         
       </div>
 
    </form>
